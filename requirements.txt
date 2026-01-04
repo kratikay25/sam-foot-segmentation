@@ -1,8 +1,2 @@
 streamlit
-opencv-python-headless
-numpy
-matplotlib
-torch
-torchvision
-segment-anything
 Pillow
