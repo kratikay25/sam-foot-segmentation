@@ -147,4 +147,3 @@ if os.path.exists(output_path):
     st.success("Foot segmentation displayed successfully!")
 else:
     st.error("Segmentation result not found. Please upload results folder.")
->>>>>>> 9c8b63328cfbf9eeb2d67276157f1336b560e5c6
