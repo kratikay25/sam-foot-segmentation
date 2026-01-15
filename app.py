@@ -1,8 +1,4 @@
 import streamlit as st
-HEAD
-(old code)
-(new code)
-origin/main
 import cv2
 import numpy as np
 import torch
