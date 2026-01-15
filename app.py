@@ -106,7 +106,6 @@ if uploaded_file:
         st.image(result, use_container_width=True)
 
     st.success("Segmentation completed successfully.")
-=======
 from PIL import Image
 import os
 
