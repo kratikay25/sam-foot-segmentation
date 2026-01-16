@@ -50,8 +50,10 @@ def load_sam():
         with st.spinner("Downloading SAM model (one-time, please wait)..."):
             urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
 
-    sam = sam_model_registry["vit_b"](checkpoint=MODEL_PATH)
-    sam.to(device="cpu")
+sam = sam_model_registry["vit_b"](checkpoint=MODEL_PATH)
+sam.to(device="cpu")
+
+mask_generator = SamAutomaticMaskGenerator(sam)
 
     return SamAutomaticMaskGenerator(
         sam,
