@@ -6,6 +6,15 @@ from PIL import Image
 import os
 import urllib.request
 from segment_anything import sam_model_registry, SamAutomaticMaskGenerator
+# -------------------------------
+# SAM model auto-download (CPU)
+# -------------------------------
+MODEL_URL = "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth"
+MODEL_PATH = "sam_vit_b_01ec64.pth"
+
+if not os.path.exists(MODEL_PATH):
+    with st.spinner("Downloading SAM model (first time only)..."):
+        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
 
 
 st.set_page_config(
